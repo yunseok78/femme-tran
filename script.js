@@ -9,11 +9,12 @@ function translator(str) {
     return Hangul.assemble(d);
   }).join('');
 
-  window.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('.change').addEventListener('click', function () {
-      alert('click');
-      var changeText = translator(document.querySelector('.original-text').value);
-      document.querySelector('.result-text').innerText = changeText;
-    });
-  });
 }
+
+window.addEventListener('DOMContentLoaded', function() {
+  document.querySelector('.change').addEventListener('click', function () {
+    alert('click');
+    var changeText = translator(document.querySelector('.original-text').value);
+    document.querySelector('.result-text').innerText = changeText;
+  });
+});
