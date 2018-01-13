@@ -12,7 +12,6 @@ function translator(str) {
 
 window.addEventListener('DOMContentLoaded', function() {
   document.querySelector('.change').addEventListener('click', function () {
-    alert(document.querySelector('.original-text').value);
     var changeText = translator(document.querySelector('.original-text').value);
     document.querySelector('.result-text').innerText = changeText;
   });
