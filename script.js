@@ -1,5 +1,5 @@
 function translator(str) {
-  return str.splite('').map(function(char) {
+  return str.split('').map(function(char) {
     var d = Hangul.disassemble(char);
     if(d[3] && Hangul.isVowel(d[1]) && Hangul.isVowel(d[2])){
       var tmp = d[3];
@@ -8,7 +8,6 @@ function translator(str) {
     }
     return Hangul.assemble(d);
   }).join('');
-
 }
 
 window.addEventListener('DOMContentLoaded', function() {
